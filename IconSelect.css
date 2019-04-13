@@ -1,0 +1,111 @@
+.icon-select{
+    width:0px;
+}
+.icon-select .selected-box {
+
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 70px; /* sil */
+    height: 60px; /* sil */
+    border: 2px solid #999999;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+.icon-select .selected-box:hover {
+
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 70px; /* sil */
+    height: 60px; /* sil */
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+}
+.icon-select .selected-icon {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top:5px;
+    left:10px;
+    right: 3px;
+    width: 48px; /* sil */
+    height: 48px; /* sil */
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow-y:scroll;
+}
+.selected-icon > img{
+    margin-top: 3px;
+    margin-left: 4px;
+}
+.icon-select .component-icon{
+    position: absolute;
+    top:5px;
+    right:4px;
+}
+.icon-select .box {
+    position: absolute;
+    top:0px;
+    left:71px;
+    margin: 0px;
+    padding: 0px;
+    width: 170px; /* sil */
+    height: 170px; /* sil */
+    border: 2px solid #EEEEEE;
+    background-color: #9c9c9c;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow-y:scroll;
+    z-index: 1000000;
+}
+.icon-select .icon {
+    position: relative;
+    margin: 5px 0px 0px 5px;
+    padding: 0px;
+    width: 48px; /* sil */
+    height: 48px; /* sil */
+    border: 2px solid #CCCCCC;
+    background-color: #FFFFFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    overflow:hidden;
+    float: left;
+}
+.icon > img {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+.icon-select .icon:hover {
+    border: 2px solid darkgreen;
+}
+.icon-select .icon.selected {
+    position: relative;
+    margin: 5px 0px 0px 5px;
+    padding: 0px;
+    width: 48px; /* sil */
+    height: 48px; /* sil */
+    border: 2px solid #EEEEEE;
+    background-color: #EEEEEE;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    overflow:hidden;
+    float: left;
+}

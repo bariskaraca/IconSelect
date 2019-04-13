@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="IconSelect.css">
+</head>
+<body>
+    <div id="iconSelect"></div>
+    <div style="position: absolute; right: 50px; top: 50px;">
+        <button id="getSelectedIndex">getSelectedIndexes</button>
+        <ul id="selectedIndex"></ul>
+    </div>
+</body>
+<script src="IconSelect.js"></script>
+<script src="Jquery.js"></script>
+<script>
+    var iconSelect = new IconSelect("#iconSelect",
+        {
+            'selectedIconWidth': 48,
+            'selectedIconHeight': 48,
+            'selectedBoxPadding': 1,
+            'multipleSelect': true,
+            'selectedVectoralIconNumber': 2,
+            'selectedHorizontalIconNumber': 3,
+            'iconsWidth': 40,
+            'iconsHeight': 40,
+            'boxIconSpace': 5,
+            'vectoralIconNumber': 4,
+            'horizontalIconNumber': 3,
+        });
+    var icons = [
+        {'iconFilePath': "./icons/format-bold.svg", 'iconValue': "bold", 'data': "1"},
+        {'iconFilePath': "./icons/format-italic.svg", 'iconValue': "italic", 'data': "1"},
+        {'iconFilePath': "./icons/format-clear.svg", 'iconValue': "clear", 'data': "1"},
+        {'iconFilePath': "./icons/format-header-1.svg", 'iconValue': "h1", 'data': "1"},
+        {'iconFilePath': "./icons/format-header-2.svg", 'iconValue': "h2", 'data': "1"},
+        {'iconFilePath': "./icons/format-header-3.svg", 'iconValue': "h3", 'data': "1"},
+        {'iconFilePath': "./icons/format-header-4.svg", 'iconValue': "h4", 'data': "1"},
+        {'iconFilePath': "./icons/format-header-5.svg", 'iconValue': "h5", 'data': "1"},
+        {'iconFilePath': "./icons/format-header-6.svg", 'iconValue': "h6", 'data': "1"},
+    ];
+
+    iconSelect.setIcons(icons);
+    iconSelect.setSelectedIndex(0);
+    document.getElementById("getSelectedIndex").addEventListener("click",function () {
+        document.getElementById("selectedIndex").innerHTML = "";
+        iconSelect.getSelectedIndex().forEach(function (value) {
+            let li = document.createElement("li");
+            li.textContent = value;
+            document.getElementById("selectedIndex").appendChild(li);
+        })
+    })
+</script>
+</html>
